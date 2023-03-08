@@ -1,0 +1,75 @@
+.hero {
+    min-height: 100vh;
+    padding-bottom: 5vh;
+    display: flex;
+
+    justify-content: space-between;
+    .intro-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+            position: relative;
+            &::before {
+                content: '<h1>';
+                font-family: belle-aurore, cursive;
+                color: #515152;
+                font-size: 1.125rem;
+                position: absolute;
+                margin-top: -3rem;
+                left: -1.5rem;
+            }
+            &::after {
+                content: '</h1>';
+                font-family: belle-aurore, cursive;
+                color: #515152;
+                font-size: 1.125rem;
+                position: absolute;
+                margin-top: 2rem;
+                margin-left: 1.25rem;
+            }
+        }
+
+        p {
+            margin: 0.5rem 0 3rem 0;
+            font-size: 1.4rem;
+            letter-spacing: 0.3rem;
+            position: relative;
+            &::before {
+                content: '<p>';
+                font-family: belle-aurore, cursive;
+                color: #515152;
+                font-size: 1.125rem;
+                position: absolute;
+                margin-top: -1.5rem;
+                left: -1.25rem;
+                letter-spacing: 0.25rem;
+                line-height: 1.5;
+                text-transform: none;
+            }
+            &::after {
+                content: '</p>';
+                font-family: belle-aurore, cursive;
+                color: #515152;
+                font-size: 1.125rem;
+                position: absolute;
+                margin-top: 1.5rem;
+                text-transform: none;
+                left: -2.15rem;
+            }
+        }
+
+        .custom-btn {
+            margin-top: 3rem;
+        }
+    }
+    .name-wrapper {
+        display: inline-flex;
+        align-items: baseline;
+        svg {
+            width: 108px;
+            align-self: center;
+            margin-right: -1.215rem;
+        }
+    }
+}

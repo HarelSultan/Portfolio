@@ -1,0 +1,25 @@
+.skills {
+    // margin-bottom: $section-spacing;
+    min-height: 90vh;
+    h2 {
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: auto;
+        max-width: 85%;
+        row-gap: 8rem;
+        justify-items: center;
+
+        .skill {
+            display: flex;
+            align-items: center;
+            svg {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}

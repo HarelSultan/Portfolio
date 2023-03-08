@@ -1,0 +1,26 @@
+section.about {
+    min-height: 85vh;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    .about-desc-container {
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        flex-basis: 58%;
+    }
+    .about-img-container {
+        padding-right: 2rem;
+    }
+    img {
+        border-radius: 50%;
+    }
+}
+p {
+    margin-bottom: 1rem;
+    font-family: semi-poppins;
+}

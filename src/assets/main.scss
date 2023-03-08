@@ -1,0 +1,24 @@
+// Setup
+@import './setup/mixins';
+@import './setup/typography';
+@import './setup/variables';
+
+// Basics
+@import './basics/base';
+@import './basics/helpers';
+@import './basics/layout';
+
+// Cmps
+@import './components/app-header';
+@import './components/sidebar';
+@import './components/hero';
+@import './components/about';
+@import './components/portfolio';
+@import './components/skills';
+@import './components/contact';
+@import './components/app-footer';
+@import './components/custom-btn';
+@import './components/skills-shpere';
+
+// Pages
+@import './pages/_home.scss';
