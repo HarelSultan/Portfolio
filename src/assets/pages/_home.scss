@@ -1,5 +1,8 @@
 .home-page {
-    margin-left: 8.5rem;
+    margin-top: 10rem;
+    @include for-normal-layout {
+        margin: 0 0 0 8.5rem;
+    }
     // display: flex;
     gap: 1rem;
     .side-bar-wrapper {

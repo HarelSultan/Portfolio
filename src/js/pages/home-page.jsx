@@ -8,7 +8,7 @@ export function HomePage() {
     return (
         <main className='main-layout full home-page'>
             <div className='side-bar-wrapper full'>{/* <SideBar /> */}</div>
-            <div className='main-content'>
+            <div className='main-content main-layout'>
                 <Hero />
                 <About />
                 <Portfolio />

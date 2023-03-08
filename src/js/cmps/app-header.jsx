@@ -1,8 +1,9 @@
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 
-export function AppHeader() {
+export function AppHeader({ onSetMenuDisplay }) {
     return (
-        <header className='app-header main-layout full'>
+        <header className='main-layout full app-header'>
+            <div onClick={onSetMenuDisplay} className='main-screen full'></div>
             <div className='layout-wrapper'>
                 <div className='logo-container'>
                     <a href='#hero'>
@@ -35,28 +36,55 @@ export function AppHeader() {
                 <nav className='app-nav'>
                     <ul className='links-list clean-list'>
                         <li className='link-wrapper'>
-                            <a className='link active' href='#about'>
+                            <a onClick={onSetMenuDisplay} className='link' href='#about'>
                                 About
                             </a>{' '}
                         </li>
                         <li className='link-wrapper'>
-                            <a className='link' href='#portfolio'>
+                            <a onClick={onSetMenuDisplay} className='link' href='#portfolio'>
                                 Portfolio
                             </a>
                         </li>
                         <li className='link-wrapper'>
-                            <a className='link' href='#skills'>
+                            <a onClick={onSetMenuDisplay} className='link' href='#skills'>
                                 Skills
                             </a>
                         </li>
                         <li className='link-wrapper'>
-                            <a className='link' href='#contact'>
+                            <a onClick={onSetMenuDisplay} className='link' href='#contact'>
                                 Contact
                             </a>
                         </li>
+                        <li>
+                            <ul className='sidebar-icons clean-list'>
+                                <li className='sidebox' onClick={() => window.open('https://github.com/harelsultan')}>
+                                    <FaGithub />
+                                </li>
+
+                                <li className='sidebox' onClick={() => window.open('mailto:harel714@gmail.com')}>
+                                    <svg
+                                        stroke='currentColor'
+                                        fill='currentColor'
+                                        stroke-width='0'
+                                        viewBox='0 0 512 512'
+                                        height='1em'
+                                        width='1em'
+                                        xmlns='http://www.w3.org/2000/svg'
+                                    >
+                                        <path d='M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z'></path>
+                                    </svg>
+                                </li>
+                                <li
+                                    className='sidebox'
+                                    onClick={() => window.open('https://www.linkedin.com/in/harel-sultan-835157264/')}
+                                >
+                                    <FaLinkedinIn />
+                                </li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav>
-                <ul className='sidebar-icons clean-list'>
+                {/* <ul className='sidebar-icons clean-list'>
                     <li className='sidebox' onClick={() => window.open('https://github.com/harelsultan')}>
                         <FaGithub />
                     </li>
@@ -80,7 +108,10 @@ export function AppHeader() {
                     >
                         <FaLinkedinIn />
                     </li>
-                </ul>
+                </ul> */}
+                <button onClick={onSetMenuDisplay} className='menu-toggle-btn'>
+                    ☰
+                </button>
             </div>
         </header>
     )

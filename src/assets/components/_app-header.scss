@@ -1,146 +1,265 @@
-// .app-header {
-//     left: 0;
-//     position: fixed;
-//     top: 0;
-//     width: 100%;
-//     z-index: 10;
-//     &.active {
-//         backdrop-filter: blur(10px);
-//         background: hsla(0, 0%, 100%, 0.15);
-//     }
-//     .layout-wrapper {
-//         display: flex;
-//         align-items: center;
-//         padding: 1.2rem 3rem;
-//     }
-
-//     .logo-container {
-//         display: flex;
-//     }
-
-//     .app-nav {
-//         margin-left: auto;
-//     }
-
-//     .links-list {
-//         display: flex;
-//         align-items: center;
-
-//         .link {
-//             box-shadow: -1px 0.5px 0 0 #282828;
-//             // border-bottom: 1px solid #282828;
-//             // border-bottom: 1px solid $primary-clr;
-
-//             padding: 1rem 1.5rem;
-//             transition: 0.4s;
-
-//             &:hover,
-//             .active {
-//                 color: $primary-clr;
-//             }
-//         }
-//         .link-wrapper:last-child .link {
-//             box-shadow: 1px 0.5px 0 0 #282828;
-//         }
-//     }
-// }
-
 .app-header {
-    left: 0;
     position: fixed;
+    width: 100%;
     top: 0;
-    // width: 100%;
-    // transform: translateY(-45deg);
-    // &.active {
-    //     backdrop-filter: blur(10px);
-    //     background: hsla(0, 0%, 100%, 0.15);
-    // }
-    width: 8.125rem;
-    background-color: #181818;
-    height: 100vh;
-    right: auto;
-    bottom: 0;
-    display: flex;
-    z-index: 11;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+    z-index: 5;
+    background: #181818;
+
+    @include for-normal-layout {
+        display: flex;
+        width: 8.125rem;
+        height: 100vh;
+    }
+
+    .main-screen {
+        position: fixed;
+        background: rgba(18, 18, 18, 0.95);
+        inset: 0;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.6s;
+        pointer-events: none;
+
+        .app.menu-open & {
+            pointer-events: auto;
+            opacity: 1;
+        }
+
+        @include for-normal-layout {
+            display: none;
+            position: static;
+        }
+    }
+
+    .menu-toggle-btn {
+        background: $main-bg-clr;
+        color: inherit;
+        font-size: 1.5em;
+        padding: 0.15rem 0.6rem 0.375rem 0.6rem;
+        border: none;
+        background: #181818;
+        margin-left: auto;
+        z-index: 6;
+        @include for-normal-layout {
+            display: none;
+        }
+    }
     .layout-wrapper,
     .logo-container,
-    .app-nav,
     .links-list,
     .link-wrapper,
     .link {
-        width: 100%;
+        @include for-normal-layout {
+            width: 100%;
+        }
     }
     .layout-wrapper {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        height: 100%;
-        // Consider using space between
-        // justify-content: space-between;
+        @include for-normal-layout {
+            display: block;
+        }
+        // ???
     }
 
     .logo-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 120px;
+        width: 4rem;
+        z-index: 6;
+
+        @include for-normal-layout {
+            display: flex;
+            height: 120px;
+            width: auto;
+        }
+
         a {
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            cursor: pointer;
+            @include for-normal-layout {
+                width: 100%;
+                // remove justify-content ?
+            }
         }
     }
 
     .app-nav {
-        // margin-left: auto;
+        position: absolute;
+        width: 100%;
+        max-height: 0;
+        transform: translateY(100%);
+        bottom: 0;
+        left: 0;
+        @include for-normal-layout {
+            position: static;
+            // positions static ?
+            transform: none;
+
+            // max-height ?
+            max-height: none;
+        }
     }
 
     .links-list {
+        width: 100%;
         display: flex;
-        align-items: center;
+        // align-items: center;
+        // justify-content: center;
         flex-direction: column;
-        border-top: 1px solid #282828;
+        max-height: 0;
+        transform: translateY(100%);
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: max-height 0.5s;
+        @include for-normal-layout {
+            border-top: 1px solid #282828;
+            // display ?
+            // max-height ?
+            max-height: none;
+            transform: none;
+            position: static;
+        }
+
+        .app.menu-open & {
+            // ???
+            // box-shadow: -3px 0px 10px rgb(0 0 0 / 20%);
+            max-height: 100vh;
+            @include for-normal-layout {
+                max-height: none;
+            }
+        }
 
         .link {
             display: block;
             text-align: center;
-            padding: 1rem 1.5rem;
+            padding: 1.5rem 0;
             border-bottom: 1px solid #282828;
             transition: 0.4s;
             font-family: 'regular-poppins';
+            @include for-normal-layout {
+                padding: 1rem 1.5rem;
+            }
+            &:first-child {
+                border-top: 1px solid #282828;
+            }
+            @include for-normal-layout {
+                // check if needed
+                border-top: 0;
+            }
 
-            &:hover,
-            .active {
+            &:hover {
                 color: $primary-clr;
             }
         }
-    }
-    .sidebar-icons {
-        margin-top: auto;
-        display: flex;
-        width: 100%;
-    }
 
-    .sidebox {
-        width: 100%;
-        height: 58px;
+        .sidebar-icons {
+            display: flex;
+            width: 100%;
+            margin-top: auto;
+            @include for-normal-layout {
+                width: 130px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
+        }
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-top: 1px solid #282828;
-        border-right: 1px solid #282828;
-
-        font-size: 1.3rem;
-        cursor: pointer;
-        &:hover {
-            color: #a9a9a9;
+        .sidebox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            // check dimensions
+            height: 58px;
+            border-bottom: 1px solid #282828;
+            border-right: 1px solid #282828;
+            font-size: 1.3rem;
+            cursor: pointer;
+            @include for-normal-layout {
+                height: 48px;
+                // check if needed
+                border-bottom: 0;
+                border-top: 1px solid #282828;
+                font-size: 1.4rem;
+            }
+            &:hover {
+                color: #a9a9a9;
+            }
         }
     }
 }
+
+// // Desktop
+// .app-header {
+//     display: flex;
+//     position: fixed;
+//     width: 8.125rem;
+//     background-color: #181818;
+//     height: 100vh;
+
+//     .menu-toggle-btn {
+//         display: none;
+//     }
+
+//     .layout-wrapper,
+//     .logo-container,
+//     .app-nav,
+//     .links-list,
+//     .link-wrapper,
+//     .link {
+//         width: 100%;
+//     }
+
+//     .logo-container {
+//         display: flex;
+//         height: 120px;
+//         a {
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//         }
+//     }
+
+//     .links-list {
+//         border-top: 1px solid #282828;
+
+//         .link {
+//             display: block;
+//             text-align: center;
+//             padding: 1rem 1.5rem;
+//             border-bottom: 1px solid #282828;
+//             transition: 0.4s;
+//             font-family: 'regular-poppins';
+
+//             &:hover {
+//                 color: $primary-clr;
+//             }
+//         }
+//     }
+//     .sidebar-icons {
+//         display: flex;
+//         width: 130px;
+//         position: absolute;
+//         bottom: 0;
+//         left: 0;
+//     }
+
+//     .sidebox {
+//         height: 48px;
+//         width: 100%;
+
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//         border-top: 1px solid #282828;
+//         border-right: 1px solid #282828;
+
+//         font-size: 1.4rem;
+//         cursor: pointer;
+//         &:hover {
+//             color: #a9a9a9;
+//         }
+//     }
+// }
