@@ -6,7 +6,7 @@ import { Skills } from '../cmps/skills'
 
 export function HomePage() {
     return (
-        <main className='main-layout full home-page'>
+        <main id='home' className='main-layout full home-page'>
             <div className='side-bar-wrapper full'>{/* <SideBar /> */}</div>
             <div className='main-content main-layout'>
                 <Hero />

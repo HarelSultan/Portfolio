@@ -56,6 +56,7 @@
     .layout-wrapper {
         display: flex;
         align-items: center;
+        grid-column: 1/-1;
         @include for-normal-layout {
             display: block;
         }
@@ -65,11 +66,13 @@
     .logo-container {
         width: 4rem;
         z-index: 6;
+        margin-left: 0.5rem;
 
         @include for-normal-layout {
             display: flex;
             height: 120px;
             width: auto;
+            margin: 0;
         }
 
         a {
@@ -137,7 +140,6 @@
             padding: 1.5rem 0;
             border-bottom: 1px solid #282828;
             transition: 0.4s;
-            font-family: 'regular-poppins';
             @include for-normal-layout {
                 padding: 1rem 1.5rem;
             }

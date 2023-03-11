@@ -3,13 +3,12 @@ import { SkillsShpere } from './skills-shpere'
 
 export function Hero() {
     return (
-        <section id='hero' className='main-layout hero'>
+        <section className='main-layout full hero'>
             <div className='intro-wrapper'>
                 <h1>
                     Hi,
                     <br />
-                    {/* I'm <span className='markup-txt'>Harel</span> */}
-                    I'm{' '}
+                    I’m
                     <div className='name-wrapper'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -37,15 +36,14 @@ export function Hero() {
                         </svg>
                         arel
                     </div>
-                    <br />
-                    web developer
+                    {/* <br /> */}
+                    {/* web developer */}
                 </h1>
                 <p className='sub-txt'>full stack developer</p>
                 <h3>Dedicated to creating cutting-edge web solutions</h3>
 
                 <CustomBtn href={'#contact'} txt={'Contact me!'} />
             </div>
-
             <SkillsShpere />
         </section>
     )

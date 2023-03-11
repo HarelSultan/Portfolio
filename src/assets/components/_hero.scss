@@ -1,23 +1,44 @@
 .hero {
     min-height: 100vh;
-    padding-bottom: 5vh;
     display: flex;
-
-    justify-content: space-between;
+    flex-direction: column;
+    // width: 100%;
+    @include for-normal-layout {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: $section-spacing;
+    }
     .intro-wrapper {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        min-height: 75vh;
+        @include for-normal-layout {
+            //
+            min-height: none;
+        }
+
         h1 {
             position: relative;
+            font-family: font-file1;
+            font-weight: 400;
+
+            @include for-normal-layout {
+                font-size: 5.5rem;
+                line-height: 5.5rem;
+            }
+
             &::before {
                 content: '<h1>';
                 font-family: belle-aurore, cursive;
                 color: #515152;
                 font-size: 1.125rem;
                 position: absolute;
-                margin-top: -3rem;
+                margin-top: -2.5rem;
                 left: -1.5rem;
+                @include for-normal-layout {
+                    margin-top: -3rem;
+                }
             }
             &::after {
                 content: '</h1>';
@@ -31,10 +52,15 @@
         }
 
         p {
-            margin: 0.5rem 0 3rem 0;
-            font-size: 1.4rem;
-            letter-spacing: 0.3rem;
+            margin: 1.5rem 0 3rem 0;
+            font-size: 1rem;
+            letter-spacing: 0.1rem;
             position: relative;
+            @include for-normal-layout {
+                margin: 0.5rem 0 3rem 0;
+                font-size: 1.4rem;
+                letter-spacing: 0.3rem;
+            }
             &::before {
                 content: '<p>';
                 font-family: belle-aurore, cursive;
@@ -59,17 +85,117 @@
             }
         }
 
+        h3 {
+            @include for-normal-layout {
+                font-size: 1.75rem;
+                line-height: 1.75rem;
+            }
+        }
+
         .custom-btn {
-            margin-top: 3rem;
+            margin-top: 1.5rem;
+            @include for-normal-layout {
+                // margin-top: 3rem;
+            }
         }
     }
     .name-wrapper {
         display: inline-flex;
         align-items: baseline;
         svg {
-            width: 108px;
+            width: 5rem;
             align-self: center;
-            margin-right: -1.215rem;
+            margin-right: -1rem;
+            margin-top: -0.6rem;
+            @include for-normal-layout {
+                width: 6.75rem;
+                margin-right: -1.215rem;
+                margin-top: -0.75rem;
+            }
+        }
+    }
+
+    .skills-shpere {
+        margin-bottom: $section-spacing;
+        @include for-normal-layout {
+            margin-bottom: 0;
         }
     }
 }
+
+// Desktop
+// .hero {
+//     min-height: 100vh;
+//     padding-bottom: 5vh;
+//     display: flex;
+
+//     justify-content: space-between;
+//     .intro-wrapper {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         h1 {
+//             position: relative;
+//             &::before {
+//                 content: '<h1>';
+//                 font-family: belle-aurore, cursive;
+//                 color: #515152;
+//                 font-size: 1.125rem;
+//                 position: absolute;
+//                 margin-top: -3rem;
+//                 left: -1.5rem;
+//             }
+//             &::after {
+//                 content: '</h1>';
+//                 font-family: belle-aurore, cursive;
+//                 color: #515152;
+//                 font-size: 1.125rem;
+//                 position: absolute;
+//                 margin-top: 2rem;
+//                 margin-left: 1.25rem;
+//             }
+//         }
+
+//         p {
+//             margin: 0.5rem 0 3rem 0;
+//             font-size: 1.4rem;
+//             letter-spacing: 0.3rem;
+//             position: relative;
+//             &::before {
+//                 content: '<p>';
+//                 font-family: belle-aurore, cursive;
+//                 color: #515152;
+//                 font-size: 1.125rem;
+//                 position: absolute;
+//                 margin-top: -1.5rem;
+//                 left: -1.25rem;
+//                 letter-spacing: 0.25rem;
+//                 line-height: 1.5;
+//                 text-transform: none;
+//             }
+//             &::after {
+//                 content: '</p>';
+//                 font-family: belle-aurore, cursive;
+//                 color: #515152;
+//                 font-size: 1.125rem;
+//                 position: absolute;
+//                 margin-top: 1.5rem;
+//                 text-transform: none;
+//                 left: -2.15rem;
+//             }
+//         }
+
+//         .custom-btn {
+//             margin-top: 3rem;
+//         }
+//     }
+//     .name-wrapper {
+//         display: inline-flex;
+//         align-items: baseline;
+//         svg {
+//             width: 6.75rem;
+//             align-self: center;
+//             margin-right: -1.215rem;
+//         }
+//     }
+// }

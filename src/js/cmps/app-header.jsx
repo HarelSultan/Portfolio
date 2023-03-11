@@ -6,7 +6,7 @@ export function AppHeader({ onSetMenuDisplay }) {
             <div onClick={onSetMenuDisplay} className='main-screen full'></div>
             <div className='layout-wrapper'>
                 <div className='logo-container'>
-                    <a href='#hero'>
+                    <a href='#root'>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
                             zoomAndPan='magnify'

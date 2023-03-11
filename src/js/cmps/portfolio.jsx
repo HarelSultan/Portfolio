@@ -31,7 +31,7 @@ export function Portfolio() {
     ]
 
     return (
-        <section className='portfolio' id='portfolio'>
+        <section className='full portfolio' id='portfolio'>
             <h2 className='markup-txt'>My Portfolio</h2>
             <span>A small gallery of recent projects chosen by me.</span>
             <Carousel>

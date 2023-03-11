@@ -1,16 +1,25 @@
 section.about {
     min-height: 85vh;
-    display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+
+    .about-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        @include for-normal-layout {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+        }
+    }
     h2 {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
     }
 
     .about-desc-container {
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         flex-basis: 58%;
     }
     .about-img-container {
@@ -19,8 +28,18 @@ section.about {
     img {
         border-radius: 50%;
     }
-}
-p {
-    margin-bottom: 1rem;
-    font-family: semi-poppins;
+    p {
+        margin-bottom: 1rem;
+    }
+    .custom-btn {
+        width: 100%;
+    }
+    .flat-button {
+        max-width: 13.75rem;
+        height: 3.125rem;
+        line-height: 3.125rem;
+        @media (min-width: 1100px) {
+            margin-top: -3.125rem;
+        }
+    }
 }

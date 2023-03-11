@@ -1,6 +1,6 @@
 export function Skills() {
     return (
-        <section className='skills' id='skills'>
+        <section className='full skills' id='skills'>
             <h2 className='markup-txt'>Skills and Experience</h2>
             <div className='skills-container'>
                 <div className='skill'>

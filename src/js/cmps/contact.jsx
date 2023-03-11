@@ -20,7 +20,7 @@ export function Contact() {
     }
 
     return (
-        <section className='contact' id='contact'>
+        <section className='full contact' id='contact'>
             <div className='contact-container'>
                 <h2 className='markup-txt'>contact me</h2>
                 <p>

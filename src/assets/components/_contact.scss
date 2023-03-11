@@ -1,17 +1,16 @@
 .contact {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    margin-top: $section-spacing;
     gap: 2rem;
     flex-direction: column;
     text-align: center;
-    @include for-narrow-layout {
+    @include for-normal-layout {
         flex-direction: row;
         align-items: start;
         text-align: start;
     }
     .contact-container {
-        flex-basis: 55%;
+        // flex-basis: 55%;
         margin-top: -1%;
         h2 {
             margin-bottom: 2rem;
@@ -22,7 +21,9 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 0.5rem;
-        // align-content: start;
+        align-content: start;
+        flex-basis: 90%;
+
         input,
         textarea {
             width: 100%;
@@ -73,6 +74,11 @@
 
         .custom-btn {
             justify-content: end;
+        }
+        .flat-button {
+            max-width: 13.75rem;
+            height: 3.125rem;
+            line-height: 3.125rem;
         }
     }
 }

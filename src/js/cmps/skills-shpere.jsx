@@ -23,7 +23,7 @@ export function SkillsShpere() {
                 'Socket IO',
             ]
             const options = {
-                radius: 350,
+                radius: 200,
                 maxSpeed: 'fast',
                 initSpeed: 'fast',
                 keep: false,

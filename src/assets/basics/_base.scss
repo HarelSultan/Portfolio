@@ -7,7 +7,13 @@
 
 html {
     font-family: poppins, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+
     color: $main-text-clr;
+    @media (max-width: 960px) {
+        font-size: 15px;
+    }
 }
 
 body {
@@ -21,37 +27,34 @@ body {
     min-height: 100vh;
 }
 
-h2,
-h3,
-h4,
-h5,
-h6 {
-    text-transform: capitalize;
-    font-family: semi-poppins;
-}
-
 h1 {
-    font-size: 88px;
-    line-height: 110px;
-    font-family: semi-poppins;
+    // font-size: 5.5rem;
+    // line-height: 6.875rem;
+    font-size: 4rem;
+    line-height: 4rem;
+    // font-family: semi-poppins;
+    letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 48.5px;
-    line-height: 48.5px;
+    font-size: 3.035rem;
+    line-height: 3.035rem;
     font-weight: 600;
 }
 
 h3 {
-    font-size: 24.5px;
-    line-height: 24.5px;
-    font-weight: 600;
+    // font-size: 1.5rem;
+    // line-height: 1.5rem;
+    // font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 400;
 }
 
 p {
-    font-size: 16px;
-    line-height: 23.5px;
-    font-family: light-poppins;
+    font-size: 1rem;
+    line-height: 1.465rem;
+    // font-family: light-poppins;
     letter-spacing: 0.075rem;
 }
 
