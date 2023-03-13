@@ -1,8 +1,14 @@
 import { useState } from 'react'
+import { useForm, ValidationError } from '@formspree/react'
 import { CustomBtn } from './custom-btn'
 
 export function Contact() {
+    const [state, handleSubmit] = useForm('mayzbdye')
     const [contactForm, setContactForm] = useState({ name: '', email: '', subject: '', msg: '' })
+
+    if (state.succeeded) {
+        return <p>Message sent, Thank you!</p>
+    }
 
     const handleChange = ({ target }) => {
         const { name: field, value } = target
@@ -28,7 +34,7 @@ export function Contact() {
                     and expanding my horizons.
                 </p>
             </div>
-            <form className='contact-form' onSubmit={onSubmitContact}>
+            <form className='contact-form' onSubmit={handleSubmit}>
                 <div className='name-input-wrapper'>
                     <input
                         type='text'
@@ -49,6 +55,7 @@ export function Contact() {
                     />
                     <label></label>
                 </div>
+                <ValidationError prefix='Email' field='email' errors={state.errors} />
 
                 <div className='subject-input-wrapper'>
                     <input
@@ -75,9 +82,14 @@ export function Contact() {
                     <label></label>
                 </div>
 
-                {/* <button className='btn btn-submit'>Send message!</button> */}
-                <div onClick={onSubmitContact} className='btn-submit-wrapper'>
-                    <CustomBtn href={'#'} txt={'Send message!'} />
+                <div className='custom-btn btn-submit-wrapper'>
+                    <button type='submit' className='flat-button'>
+                        <div>
+                            <span className='bg'></span>
+                            <span className='base'></span>
+                            <span className='text'>Send message!</span>
+                        </div>
+                    </button>
                 </div>
             </form>
         </section>
