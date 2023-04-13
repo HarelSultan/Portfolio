@@ -3,35 +3,44 @@ import TagCloud from 'TagCloud'
 
 export function SkillsShpere() {
     useEffect(() => {
-        return () => {
-            const container = '.tagcloud'
-            const skills = [
-                'HTML',
-                'CSS',
-                'SASS',
-                'JavaScript',
-                'React',
-                'Angular',
-                'Node JS',
-                'Git',
-                'NPM',
-                'TypeScript',
-                'REST',
-                'ES6',
-                'Express JS',
-                'Mongo DB',
-                'Socket IO',
-            ]
-            const options = {
-                radius: 200,
-                maxSpeed: 'fast',
-                initSpeed: 'fast',
-                keep: false,
-            }
+        const container = '.tagcloud'
+        const skills = [
+            'HTML',
+            'CSS',
+            'SASS',
+            'JavaScript',
+            'React',
+            'Angular',
+            'Node JS',
+            'Git',
+            'NPM',
+            'TypeScript',
+            'REST',
+            'ES6',
+            'Express JS',
+            'Mongo DB',
+            'Socket IO',
+        ]
 
-            TagCloud(container, skills, options)
+        function radiusValue() {
+            let radii
+            if (window.screen.width <= 778) {
+                radii = 200
+            } else {
+                radii = 290
+            }
+            return radii
         }
+
+        const options = {
+            radius: radiusValue(),
+            maxSpeed: 'normal',
+            initSpeed: 'normal',
+            keep: true,
+        }
+        return () => TagCloud(container, skills, options)
     }, [])
+
     return (
         <div className='skills-shpere'>
             <span className='tagcloud'></span>
