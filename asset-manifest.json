@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.5722abe4.css",
+    "main.js": "/Portfolio/static/js/main.f66793fa.js",
+    "static/media/meme-gen.png": "/Portfolio/static/media/meme-gen.3fe10681d8ca7ceccc9e.png",
+    "static/media/airbnb.png": "/Portfolio/static/media/airbnb.9cd84b4624a8139b7332.png",
+    "static/media/editor-quix.png": "/Portfolio/static/media/editor-quix.144b25399b226dfdeb02.png",
+    "static/media/quix.png": "/Portfolio/static/media/quix.b50791984156ac3b4ac4.png",
+    "static/media/Poppins-ExtraLight.ttf": "/Portfolio/static/media/Poppins-ExtraLight.333cb30c20e31999802a.ttf",
+    "static/media/Poppins-Regular.ttf": "/Portfolio/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
+    "static/media/Poppins-SemiBold.ttf": "/Portfolio/static/media/Poppins-SemiBold.ac8d04b620e54be9b0f0.ttf",
+    "static/media/Poppins-Bold.ttf": "/Portfolio/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
+    "static/media/Poppins-ExtraBold.ttf": "/Portfolio/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
+    "static/media/Poppins-Black.ttf": "/Portfolio/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
+    "static/media/portfolio.png": "/Portfolio/static/media/portfolio.80d2852c127ce4ed3986.png",
+    "static/media/LaBelleAurore-Regular.ttf": "/Portfolio/static/media/LaBelleAurore-Regular.bc43b15661f3e942b3f6.ttf",
+    "static/media/logo.svg": "/Portfolio/static/media/logo.7b372b758122b308b97f.svg",
+    "index.html": "/Portfolio/index.html",
+    "main.5722abe4.css.map": "/Portfolio/static/css/main.5722abe4.css.map",
+    "main.f66793fa.js.map": "/Portfolio/static/js/main.f66793fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5722abe4.css",
+    "static/js/main.f66793fa.js"
+  ]
+}
