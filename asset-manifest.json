@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.5722abe4.css",
-    "main.js": "/Portfolio/static/js/main.f27ba1ad.js",
+    "main.css": "/Portfolio/static/css/main.e4d076dd.css",
+    "main.js": "/Portfolio/static/js/main.e1fc0d8a.js",
     "static/media/meme-gen.png": "/Portfolio/static/media/meme-gen.3fe10681d8ca7ceccc9e.png",
     "static/media/airbnb.png": "/Portfolio/static/media/airbnb.9cd84b4624a8139b7332.png",
     "static/media/editor-quix.png": "/Portfolio/static/media/editor-quix.144b25399b226dfdeb02.png",
@@ -16,11 +16,11 @@
     "static/media/LaBelleAurore-Regular.ttf": "/Portfolio/static/media/LaBelleAurore-Regular.bc43b15661f3e942b3f6.ttf",
     "static/media/logo.svg": "/Portfolio/static/media/logo.7b372b758122b308b97f.svg",
     "index.html": "/Portfolio/index.html",
-    "main.5722abe4.css.map": "/Portfolio/static/css/main.5722abe4.css.map",
-    "main.f27ba1ad.js.map": "/Portfolio/static/js/main.f27ba1ad.js.map"
+    "main.e4d076dd.css.map": "/Portfolio/static/css/main.e4d076dd.css.map",
+    "main.e1fc0d8a.js.map": "/Portfolio/static/js/main.e1fc0d8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.5722abe4.css",
-    "static/js/main.f27ba1ad.js"
+    "static/css/main.e4d076dd.css",
+    "static/js/main.e1fc0d8a.js"
   ]
 }
