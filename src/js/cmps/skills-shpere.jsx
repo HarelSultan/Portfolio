@@ -38,7 +38,7 @@ export function SkillsShpere() {
             initSpeed: 'normal',
             keep: true,
         }
-        return () => TagCloud(container, skills, options)
+        TagCloud(container, skills, options)
     }, [])
 
     return (
