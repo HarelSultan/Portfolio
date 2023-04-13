@@ -1,5 +1,5 @@
 import { CustomBtn } from './custom-btn'
-import { SkillsShpere } from './skills-shpere'
+import SkillsShpere from './skills-shpere'
 
 export function Hero() {
     return (
